@@ -1,4 +1,4 @@
-package com.kogo.hastarandevusistemi;
+package com.example.zonezero;
 
 import org.junit.Test;
 

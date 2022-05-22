@@ -1,21 +1,19 @@
-package com.kogo.hastarandevusistemi;
+package com.example.zonezero;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -48,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Doctors> doctorsAllArrayList;
     private ArrayList<Doctors> doctorsArrayListMale;
     private ArrayList<Doctors> doctorsArrayListFemale;
+    private ConstraintLayout clnouser;
 
     private ArrayList<Doctors> filterL = new ArrayList<>();
 
@@ -65,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         imageViewNotFoundDoctor = findViewById(R.id.imageViewNotFoundDoctor);
         cardViewRecyclerView = findViewById(R.id.cardViewRecyclerView);
         cardView = findViewById(R.id.cardView);
+        clnouser = findViewById(R.id.clnouser);
 
         toolbar.setTitle("");
 
@@ -257,12 +257,14 @@ public class MainActivity extends AppCompatActivity {
             cardViewRecyclerView.setVisibility(View.INVISIBLE);
             recyclerView.setVisibility(View.INVISIBLE);
             imageViewNotFoundDoctor.setVisibility(View.VISIBLE);
+            clnouser.setVisibility(View.VISIBLE);
             cardView.setVisibility(View.VISIBLE);
             textViewNotFoundDoctor.setVisibility(View.VISIBLE);
         }
 
         else{
             imageViewNotFoundDoctor.setVisibility(View.INVISIBLE);
+            clnouser.setVisibility(View.INVISIBLE);
             cardView.setVisibility(View.INVISIBLE);
             textViewNotFoundDoctor.setVisibility(View.INVISIBLE);
             cardViewRecyclerView.setVisibility(View.VISIBLE);

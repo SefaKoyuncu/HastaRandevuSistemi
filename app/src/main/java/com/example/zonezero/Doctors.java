@@ -1,4 +1,4 @@
-package com.kogo.hastarandevusistemi;
+package com.example.zonezero;
 
 public class Doctors {
     private String full_name;
